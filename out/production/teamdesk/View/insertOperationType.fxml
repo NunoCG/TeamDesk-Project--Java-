@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InsertOperationType">
+   <children>
+      <AnchorPane layoutY="7.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/Styles.css">
+         <children>
+            <TextField fx:id="inputtipo" layoutX="325.0" layoutY="324.0" onAction="#inputtipo" prefHeight="35.0" prefWidth="170.0" />
+            <Label fx:id="tipooperacao" layoutX="166.0" layoutY="328.0" text="Tipo de Operação:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Button fx:id="criartipo" layoutX="349.0" layoutY="465.0" mnemonicParsing="false" onAction="#criartipo" text="Criar">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label fx:id="idtipo" layoutX="143.0" layoutY="200.0" text="ID Tipo de Operação:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <TextField fx:id="inputid" layoutX="325.0" layoutY="196.0" onAction="#inputid" prefHeight="35.0" prefWidth="170.0" />
+            <Button fx:id="btnVoltar" layoutX="410.0" layoutY="465.0" mnemonicParsing="false" onAction="#voltar" text="Voltar">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <StackPane layoutY="-7.0" prefHeight="90.0" prefWidth="800.0" style="-fx-background-color: #1D2129;">
+               <children>
+                  <Label fx:id="titulo" text="Criar Tipo de Operaçao" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="936.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateOperator">
+    <children>
+        <TextField fx:id="idoperator" layoutX="126.0" layoutY="109.0" />
+        <Text layoutX="16.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Operador:" wrappingWidth="91.818359375">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <TextField fx:id="nameoperator" layoutX="126.0" layoutY="188.0" />
+        <Text layoutX="61.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Text layoutX="58.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Text layoutX="53.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horário:">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Text layoutX="67.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo:" wrappingWidth="39.9609375">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Button fx:id="update" layoutX="684.0" layoutY="519.0" mnemonicParsing="false" onAction="#updateOperator" prefHeight="31.0" prefWidth="75.0" text="Alterar" />
+        <RadioButton fx:id="activeOperator" layoutX="126.0" layoutY="281.0" mnemonicParsing="false" text="Ativo">
+            <toggleGroup>
+                <ToggleGroup fx:id="Status" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="inactiveOperator" layoutX="223.0" layoutY="281.0" mnemonicParsing="false" text="Inativo" toggleGroup="$Status" />
+        <RadioButton fx:id="masculineOperator" layoutX="126.0" layoutY="433.0" mnemonicParsing="false" text="Masculino">
+            <toggleGroup>
+                <ToggleGroup fx:id="Gender" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="feminineOperator" layoutX="217.0" layoutY="433.0" mnemonicParsing="false" text="Feminino" toggleGroup="$Gender" />
+        <Button fx:id="close" layoutX="799.0" layoutY="518.0" mnemonicParsing="false" onAction="#cancelWindow" prefHeight="31.0" prefWidth="75.0" text="Voltar" />
+      <Button fx:id="viewSchedule" disable="true" layoutX="127.0" layoutY="358.0" mnemonicParsing="false" onAction="#viewScheduleBt" prefHeight="25.0" prefWidth="149.0" text="Ver" />
+      <StackPane prefHeight="150.0" prefWidth="200.0" />
+      <StackPane prefHeight="75.0" prefWidth="936.0" style="-fx-background-color: #1D2129;">
+         <children>
+              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Operador" textAlignment="CENTER" wrappingWidth="163.923828125">
+                  <font>
+                      <Font size="30.0" />
+                  </font>
+              </Text>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+    </children>
+</AnchorPane>

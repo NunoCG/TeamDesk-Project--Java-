@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/Styles.css" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MachineConfig">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+            <children>
+                <AnchorPane fx:id="sidePain" layoutX="-2.0" prefHeight="738.0" prefWidth="258.0" style="-fx-background-color: #1D2129;">
+                    <children>
+                        <Button fx:id="criarMaquina" layoutY="493.0" mnemonicParsing="false" onAction="#create" prefHeight="50.0" prefWidth="259.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Criar">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button layoutY="543.0" mnemonicParsing="false" onAction="#update" prefHeight="50.0" prefWidth="259.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Alterar/Atualizar">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnRemoveSchedule" disable="true" layoutY="593.0" mnemonicParsing="false" onAction="#removeSchedule" prefHeight="50.0" prefWidth="259.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Remover horário">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnExit" layoutY="673.0" mnemonicParsing="false" onAction="#exit" prefHeight="65.0" prefWidth="259.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Voltar">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                        <TextField fx:id="txtId" layoutX="-1.0" layoutY="65.0" prefHeight="50.0" prefWidth="261.0" promptText="ID" stylesheets="@../styles/Styles.css">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+                        <TextField fx:id="txtDescription" layoutX="-1.0" layoutY="169.0" prefHeight="50.0" prefWidth="260.0" promptText="Descrição" stylesheets="@../styles/Styles.css">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+                        <RadioButton fx:id="choiceAtivo" layoutX="47.0" layoutY="401.0" mnemonicParsing="false" text="Ativo" textFill="WHITE">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="status" />
+                            </toggleGroup>
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </RadioButton>
+                        <RadioButton fx:id="choiceInativo" layoutX="129.0" layoutY="401.0" mnemonicParsing="false" text="Inativo" textFill="WHITE" toggleGroup="$status">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </RadioButton>
+                        <ComboBox fx:id="comboBox" accessibleRole="TEXT_FIELD" layoutY="242.0" prefHeight="50.0" prefWidth="259.0" promptText="Tipo de Operação" styleClass="combo-box" stylesheets="@../styles/Styles.css" />
+                        <Button fx:id="btnScheduleMachine" layoutX="76.0" layoutY="306.0" mnemonicParsing="false" onAction="#scheduleMachine" prefHeight="40.0" prefWidth="107.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Horário">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="changePain" layoutX="256.0" prefHeight="738.0" prefWidth="1030.0">
+                    <children>
+                        <TableView fx:id="tableMachine" layoutX="3.0" layoutY="119.0" onMouseClicked="#getSelectedMachines" prefHeight="295.0" prefWidth="1024.0" stylesheets="@../styles/Styles.css">
+                            <columns>
+                                <TableColumn fx:id="colId" prefWidth="112.79995727539062" text="ID" />
+                                <TableColumn fx:id="colDescription" prefWidth="457.0" text="Descrição" />
+                                <TableColumn fx:id="colOpType" minWidth="0.0" prefWidth="315.0" text="Tipo de Operação" />
+                                <TableColumn fx:id="colStatus" minWidth="0.0" prefWidth="138.0" text="Estado" />
+                            </columns>
+                        </TableView>
+                        <TableView fx:id="tableSchedule" layoutX="3.0" layoutY="475.0" prefHeight="262.0" prefWidth="1024.0" stylesheets="@../styles/Styles.css">
+                            <columns>
+                                <TableColumn fx:id="clmnIdWeekSchedule" prefWidth="166.4000244140625" text="ID da Semana" />
+                                <TableColumn prefWidth="224.0" text="Período 1">
+                                    <columns>
+                                        <TableColumn fx:id="clmnHourInSchedule1" prefWidth="230.0" text="Hora Entrada" />
+                                        <TableColumn fx:id="clmnHourOutSchedule1" prefWidth="227.0" text="Hora Saída" />
+                                    </columns></TableColumn>
+                                <TableColumn prefWidth="184.0" text="Período 2">
+                                    <columns>
+                                        <TableColumn fx:id="clmnHourInSchedule2" prefWidth="184.0" text="Hora Entrada" />
+                                        <TableColumn fx:id="clmnHourOutSchedule2" prefWidth="294.0" text="Hora Saída" />
+                                    </columns>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="443.0" text="HORÁRIOS:">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="86.0" text="MÁQUINAS:">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtSearch" layoutX="116.0" layoutY="79.0" prefHeight="30.0" prefWidth="341.0" promptText="Procurar">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </TextField>
+                        <Button fx:id="btnClearFields" layoutX="950.0" layoutY="79.0" mnemonicParsing="false" onAction="#clearFields" stylesheets="@../styles/Styles.css" text="Limpar">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Button>
+                  <StackPane layoutX="2.0" prefHeight="65.0" prefWidth="1030.0" style="-fx-background-color: #1D2129;">
+                     <children>
+                              <Label text="Configurações de Máquinas" textFill="WHITE">
+                                  <font>
+                                      <Font size="36.0" />
+                                  </font>
+                              </Label>
+                     </children>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </StackPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

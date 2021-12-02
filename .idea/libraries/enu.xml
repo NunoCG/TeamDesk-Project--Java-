@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="enu">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/enu" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/enu/samples/adaptive" />
+      <root url="file://$PROJECT_DIR$/enu/samples/alwaysencrypted" />
+      <root url="file://$PROJECT_DIR$/enu/samples/azureactivedirectoryauthentication" />
+      <root url="file://$PROJECT_DIR$/enu/samples/connections" />
+      <root url="file://$PROJECT_DIR$/enu/samples/constrained" />
+      <root url="file://$PROJECT_DIR$/enu/samples/dataclassification" />
+      <root url="file://$PROJECT_DIR$/enu/samples/datatypes" />
+      <root url="file://$PROJECT_DIR$/enu/samples/resultsets" />
+      <root url="file://$PROJECT_DIR$/enu/samples/sparse" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/enu" recursive="false" />
+  </library>
+</component>

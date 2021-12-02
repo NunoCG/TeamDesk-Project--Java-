@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateOperationController">
+   <children>
+      <TextField fx:id="quantidadeOps" layoutX="191.0" layoutY="230.0" prefHeight="26.0" prefWidth="200.0" />
+      <TextField fx:id="pecasPHora" layoutX="191.0" layoutY="173.0" prefHeight="26.0" prefWidth="200.0" />
+      <TextField fx:id="tempoProducao" layoutX="191.0" layoutY="286.0" prefHeight="26.0" prefWidth="200.0" />
+      <Text layoutX="66.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº de Peças P/Hora:" />
+      <Text layoutX="65.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempo de Produção:" />
+      <Text layoutX="136.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ordem:" />
+      <TextArea fx:id="instrucoesTec" layoutX="599.0" layoutY="111.0" prefHeight="124.0" prefWidth="200.0" />
+      <Text layoutX="482.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instruções Técnicas:" />
+      <Text layoutX="27.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade de Operadores:" />
+      <Text layoutX="534.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:" />
+      <TextArea fx:id="descricao" layoutX="599.0" layoutY="249.0" prefHeight="124.0" prefWidth="200.0" />
+      <ChoiceBox fx:id="tipoOp" layoutX="191.0" layoutY="112.0" prefHeight="26.0" prefWidth="200.0" />
+      <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Operação:" />
+      <Text layoutX="98.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Componentes:" />
+      <TableView layoutX="191.0" layoutY="414.0" prefHeight="180.0" prefWidth="610.0">
+        <columns>
+          <TableColumn prefWidth="77.60002136230469" text="ID" />
+            <TableColumn prefWidth="276.800048828125" text="Designação" />
+            <TableColumn prefWidth="125.5999755859375" text="Versão" />
+          <TableColumn prefWidth="134.4000244140625" text="Referência" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="616.0" layoutY="594.0" prefHeight="40.0" prefWidth="110.0">
+        <buttons>
+          <Button fx:id="botaoAdicionar" mnemonicParsing="false" text="Adicionar" />
+            <Button fx:id="botaoRemover" mnemonicParsing="false" text="Remover" />
+        </buttons>
+      </ButtonBar>
+      <BorderPane prefHeight="86.0" prefWidth="900.0" style="-fx-background-color: #6f00ff;">
+         <center>
+            <Label prefHeight="54.0" prefWidth="248.0" text="Criar Operação" textFill="#07054b" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+      <ChoiceBox fx:id="tipoOp1" layoutX="191.0" layoutY="346.0" prefHeight="26.0" prefWidth="200.0" />
+      <ButtonBar layoutX="692.0" layoutY="657.0" prefHeight="40.0" prefWidth="157.0">
+        <buttons>
+          <Button mnemonicParsing="false" text="Criar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#switchToOperationMenu" text="Cancelar">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

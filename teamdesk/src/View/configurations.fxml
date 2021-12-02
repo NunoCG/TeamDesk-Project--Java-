@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="720.0" prefWidth="1280.0" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Configurations">
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <VBox prefHeight="720.0" prefWidth="258.0" style="-fx-background-color: #1D2129;">
+                <children>
+                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1D2129;">
+                        <children>
+                            <Label layoutX="57.0" layoutY="76.0" text="ALL2YOU " textFill="WHITE">
+                                <font>
+                                    <Font size="36.0" />
+                                </font>
+                            </Label>
+                            <Label layoutX="89.0" layoutY="116.0" text="by TeamDesk" textFill="WHITE">
+                        <font>
+                           <Font size="14.0" />
+                        </font></Label>
+                        </children>
+                  <effect>
+                     <Blend />
+                  </effect>
+                    </Pane>
+                    <Button fx:id="gestaoDeClientes" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#switchToGestaoDeClientes" prefHeight="89.0" prefWidth="325.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Gestão de Clientes" textFill="WHITE">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <padding>
+                            <Insets left="50.0" />
+                        </padding>
+                    </Button>
+                    <Button fx:id="gestaoDeEncomendas" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#gestaoDeEncomendas" prefHeight="89.0" prefWidth="325.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Gestão de Encomendas" textFill="WHITE">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <padding>
+                            <Insets left="50.0" />
+                        </padding>
+                    </Button>
+                    <Button fx:id="btnFichas" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#fichasTecnicas" prefHeight="89.0" prefWidth="325.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Fichas Técnicas" textFill="WHITE">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <padding>
+                            <Insets left="50.0" />
+                        </padding>
+                    </Button>
+                    <Button fx:id="btnConfig" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#configuracoes" prefHeight="89.0" prefWidth="325.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Configurações" textFill="WHITE">
+                        <font>
+                            <Font name="Candara" size="18.0" />
+                        </font>
+                        <padding>
+                            <Insets left="50.0" />
+                        </padding>
+                    </Button>
+                    <Button fx:id="btnSair" alignment="BASELINE_LEFT" graphicTextGap="15.0" mnemonicParsing="false" onAction="#sair" prefHeight="89.0" prefWidth="325.0" style="-fx-background-color: #1D2129;" stylesheets="@../styles/Styles.css" text="Saír" textFill="WHITE">
+                        <font>
+                            <Font size="18.0" />
+                        </font>
+                        <padding>
+                            <Insets left="50.0" />
+                        </padding>
+                    </Button>
+                </children>
+            <effect>
+               <DropShadow />
+            </effect>
+            </VBox>
+            <AnchorPane layoutX="258.0" prefHeight="720.0" prefWidth="1030.0">
+                <children>
+                    <Button fx:id="btnProduto" layoutX="91.0" layoutY="143.0" mnemonicParsing="false" onAction="#menuProduto" prefHeight="150.0" prefWidth="278.0" style="-fx-background-color: #3F2B63;" stylesheets="@../styles/Styles.css" text="Produto">
+                  <font>
+                     <Font size="30.0" />
+                  </font></Button>
+                    <Button fx:id="btnComponente" layoutX="376.0" layoutY="143.0" mnemonicParsing="false" onAction="#menuComponente" prefHeight="150.0" prefWidth="278.0" style="-fx-background-color: #3F2B63;" stylesheets="@../styles/Styles.css" text="Componente">
+                  <font>
+                     <Font size="30.0" />
+                  </font></Button>
+                    <Button fx:id="btnMateriaPrima" layoutX="659.0" layoutY="143.0" mnemonicParsing="false" onAction="#menuMateriaPrima" prefHeight="150.0" prefWidth="278.0" style="-fx-background-color: #3F2B63;" stylesheets="@../styles/Styles.css" text="Matéria-Prima">
+                  <font>
+                     <Font size="30.0" />
+                  </font></Button>
+                    <Button fx:id="btnMaquina" layoutX="376.0" layoutY="302.0" mnemonicParsing="false" onAction="#menuMaquina" prefHeight="150.0" prefWidth="278.0" style="-fx-background-color: #3F2B63;" stylesheets="@../styles/Styles.css" text="Máquina">
+                  <font>
+                     <Font size="30.0" />
+                  </font></Button>
+                    <Button fx:id="btnOperador" layoutX="91.0" layoutY="302.0" mnemonicParsing="false" onAction="#menuOperador" prefHeight="150.0" prefWidth="278.0" style="-fx-background-color: #3F2B63;" stylesheets="@../styles/Styles.css" text="Operador">
+                  <font>
+                     <Font size="30.0" />
+                  </font></Button>
+                    <Button fx:id="btnTipoOperacao" layoutX="659.0" layoutY="302.0" mnemonicParsing="false" onAction="#menuTipoOperacao" prefHeight="150.0" prefWidth="278.0" style="-fx-background-color: #3F2B63;" stylesheets="@../styles/Styles.css" text="Tipo de Operação">
+                  <font>
+                     <Font size="30.0" />
+                  </font></Button>
+               <StackPane layoutX="1.0" prefHeight="100.0" prefWidth="1021.0" style="-fx-background-color: #1D2129;">
+                  <children>
+                          <Label prefHeight="53.0" prefWidth="231.0" text="Configurações" textFill="WHITE">
+                              <font>
+                                  <Font size="32.0" />
+                              </font>
+                          </Label>
+                  </children>
+                  <effect>
+                     <DropShadow />
+                  </effect>
+               </StackPane>
+               <Button fx:id="btnOperacoes" layoutX="376.0" layoutY="463.0" mnemonicParsing="false" onAction="#menuOperacoes" prefHeight="150.0" prefWidth="278.0" style="-fx-background-color: #3F2B63;" stylesheets="@../styles/Styles.css" text="Operações">
+                  <font>
+                     <Font size="30.0" />
+                  </font>
+               </Button>
+                </children></AnchorPane>
+        </children>
+    </AnchorPane>
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>

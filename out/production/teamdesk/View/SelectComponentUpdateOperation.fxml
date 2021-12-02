@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="375.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SelectComponentUpdateOperationController">
+    <children>
+        <BorderPane prefHeight="59.0" prefWidth="508.0" style="-fx-background-color: #1D2129;">
+            <center>
+                <Label prefHeight="35.0" prefWidth="151.0" style="-fx-background-color: #1D2129;" text="Componentes" textFill="WHITE" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </center>
+            <effect>
+                <DropShadow />
+            </effect>
+        </BorderPane>
+        <ButtonBar layoutX="152.0" layoutY="325.0" prefHeight="40.0" prefWidth="162.0">
+            <buttons>
+                <Button fx:id="btn_insert_operation" mnemonicParsing="false" onAction="#insert_components_operation" style="-fx-background-color: #7d5efb;" stylesheets="@../styles/Styles.css" text="Adicionar" textFill="WHITE" />
+                <Button fx:id="btn_cancel_component" mnemonicParsing="false" onAction="#cancel_component" style="-fx-background-color: #7d5efb;" stylesheets="@../styles/Styles.css" text="Cancelar" textFill="WHITE" />
+            </buttons>
+        </ButtonBar>
+        <TableView fx:id="table_view_components" layoutX="6.0" layoutY="77.0" prefHeight="248.0" prefWidth="496.0" stylesheets="@../styles/Styles.css">
+            <columns>
+                <TableColumn fx:id="table_view_components_reference" prefWidth="96.0" text="Referência" />
+                <TableColumn fx:id="table_view_components_version" prefWidth="107.0" text="Versão" />
+                <TableColumn fx:id="table_view_components_designation" prefWidth="238.0" text="Designação" />
+                <TableColumn fx:id="table_view_components_status" prefWidth="54.0" text="Estado" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

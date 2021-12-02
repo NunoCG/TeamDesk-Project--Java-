@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="936.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateClient">
+    <children>
+        <TextField fx:id="nif" editable="false" layoutX="136.0" layoutY="116.0" />
+        <Text layoutX="81.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIF:" wrappingWidth="28.818359375">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <TextField fx:id="name" layoutX="136.0" layoutY="187.0" />
+        <TextField fx:id="Notas" layoutX="136.0" layoutY="255.0" />
+        <Text layoutX="63.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Text layoutX="64.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notas:">
+            <font>
+                <Font size="16.0" />
+            </font></Text>
+        <Button fx:id="update" layoutX="58.0" layoutY="543.0" mnemonicParsing="false" onAction="#updateOperator" prefHeight="31.0" prefWidth="75.0" text="Guardar" />
+        <Button fx:id="close" layoutX="145.0" layoutY="543.0" mnemonicParsing="false" onAction="#cancelWindow" prefHeight="31.0" prefWidth="75.0" text="Voltar" />
+      <TableView fx:id="tableMoradas" layoutX="396.0" layoutY="80.0" prefHeight="200.0" prefWidth="239.0">
+        <columns>
+          <TableColumn fx:id="colunaMorada" prefWidth="238.0" text="Moradas" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableContactos" layoutX="659.0" layoutY="80.0" prefHeight="200.0" prefWidth="239.0">
+        <columns>
+          <TableColumn fx:id="colunaContacto" prefWidth="238.0" text="Contactos" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtMorada" layoutX="492.0" layoutY="290.0" prefHeight="25.0" prefWidth="143.0" />
+      <TextField fx:id="txtCodPostal" layoutX="492.0" layoutY="329.0" prefHeight="25.0" prefWidth="143.0" />
+      <TextField fx:id="txtLocal" layoutX="492.0" layoutY="368.0" prefHeight="25.0" prefWidth="143.0" />
+      <TextField fx:id="txtPais" layoutX="492.0" layoutY="406.0" prefHeight="25.0" prefWidth="143.0" />
+      <TextField fx:id="txtContacto" layoutX="755.0" layoutY="290.0" prefHeight="25.0" prefWidth="143.0" />
+      <TextField fx:id="txtObsContacto" layoutX="755.0" layoutY="372.0" prefHeight="25.0" prefWidth="143.0" />
+      <Button layoutX="583.0" layoutY="486.0" mnemonicParsing="false" onAction="#alterarMorada" text="Alterar" />
+      <Button layoutX="846.0" layoutY="486.0" mnemonicParsing="false" onAction="#alterarContacto" text="Alterar" />
+      <Button layoutX="529.0" layoutY="486.0" mnemonicParsing="false" onAction="#criarMorada" text="Criar" />
+      <Button layoutX="783.0" layoutY="486.0" mnemonicParsing="false" onAction="#criarContacto" text="Criar" />
+      <CheckBox fx:id="checkMorada" layoutX="482.0" layoutY="442.0" mnemonicParsing="false" text="Principal" />
+      <CheckBox fx:id="checkContacto" layoutX="749.0" layoutY="442.0" mnemonicParsing="false" text="Principal" />
+      <ChoiceBox fx:id="choiceTipo" layoutX="755.0" layoutY="330.0" prefHeight="25.0" prefWidth="143.0" />
+      <StackPane prefHeight="65.0" prefWidth="936.0" style="-fx-background-color: #1D2129;">
+         <children>
+              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente" textAlignment="CENTER" wrappingWidth="163.923828125">
+                  <font>
+                      <Font size="30.0" />
+                  </font>
+              </Text>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackPane>
+      <Label layoutX="441.0" layoutY="294.0" text="Morada:" />
+      <Label layoutX="393.0" layoutY="333.0" text="Código de Postal:" />
+      <Label layoutX="453.0" layoutY="372.0" text="Local:" />
+      <Label layoutX="458.0" layoutY="410.0" text="País:" />
+      <Label layoutX="685.0" layoutY="294.0" text="Contacto:" />
+      <Label layoutX="711.0" layoutY="333.0" text="Tipo:" />
+      <Label layoutX="674.0" layoutY="376.0" text="Observação:" />
+    </children>
+</AnchorPane>

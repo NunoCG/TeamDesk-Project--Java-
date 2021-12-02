@@ -1,0 +1,148 @@
+.table-view .column-header {
+    -fx-background-color: #7d5efb;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+#gestaoDeClientes:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#gestaoDeEncomendas:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#fichasTecnicas:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#btnInsertSchedule:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#criarMaquina:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#alterarMaquina:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#eliminarMaquina:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#btnExit:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#btnRemoveSchedule:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#btnScheduleMachine:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#btnConfig:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#btnSair:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+
+}
+
+#btnExit:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+
+}
+#btnFichas:hover {
+    -fx-background-color: #36393F !important;
+    -fx-background-radius: 100;
+}
+
+#sidePain {
+    -fx-background-color: #3F2B63;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #838383;
+    -fx-text-origin: #ffffff;
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #838383;
+    -fx-text-origin: #000000;
+}
+
+#comboBox {
+    -fx-background-color: #ffffff;
+    -fx-text-origin: #ffffff;
+    -fx-font-size: 15;
+}
+
+#gestaoDeClientes {
+    -fx-background-color: #3F2B63;
+}
+
+#gestaoDeClientes:hover {
+    -fx-background-color: #7d5efb;
+    -fx-background-radius: 100px;
+}
+
+#gestaoDeEncomendas {
+    -fx-background-color: #3F2B63;
+}
+
+#gestaoDeEncomendas:hover {
+    -fx-background-color: #7d5efb;
+    -fx-background-radius: 100px;
+}
+
+
+
+#btnConfig {
+    -fx-background-color: #3F2B63;
+}
+
+#btnConfig:hover {
+    -fx-background-color: #7d5efb;
+    -fx-background-radius: 100px;
+}
+
+#btnSair {
+    -fx-background-color: #3F2B63;
+}
+
+#btnSair:hover {
+    -fx-background-color: #7d5efb;
+    -fx-background-radius: 100px;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#7d5efb, #7D5EFB);
+
+}
+
+.button:hover {
+    -fx-background-color: #8D72FB !important;
+}
+
+

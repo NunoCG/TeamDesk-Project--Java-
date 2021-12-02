@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "src"
+    ],
+    "java.project.referencedLibraries": [
+        "/Users/ruiarmada/Downloads/sqljdbc_9.2 2/enu/mssql-jdbc-9.2.1.jre15.jar",
+        "/Users/ruiarmada/Downloads/sqljdbc_9.2 2/enu/mssql-jdbc-9.2.1.jre11.jar"
+    ]
+}

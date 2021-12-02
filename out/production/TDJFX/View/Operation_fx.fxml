@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Operation_fx">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Operação">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="order_operation" layoutX="149.0" layoutY="52.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="14.0" layoutY="56.0" text="Ordem Operação" />
+      <TextArea fx:id="description_operation" layoutX="149.0" layoutY="90.0" prefHeight="56.0" prefWidth="263.0" />
+      <Label layoutX="14.0" layoutY="90.0" text="Descrição Operação" />
+      <Label layoutX="14.0" layoutY="170.0" text="Instrução Técnica" />
+      <TextArea fx:id="instruction_operation" layoutX="149.0" layoutY="170.0" prefHeight="56.0" prefWidth="263.0" />
+      <Label layoutX="14.0" layoutY="250.0" text="Quantid. Operadores" />
+      <Spinner fx:id="number_operator_operation" layoutX="149.0" layoutY="246.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label layoutX="12.0" layoutY="295.0" text="Quantid. peça/hora" />
+      <TextField fx:id="num_production_operation" layoutX="149.0" layoutY="291.0" />
+      <ComboBox fx:id="select_type_operation" layoutX="149.0" layoutY="332.0" prefHeight="25.0" prefWidth="263.0" promptText="Selecionar Operação" />
+      <Label layoutX="14.0" layoutY="336.0" text="Tipo de Operação" />
+      <Line endX="193.0" layoutX="219.0" layoutY="382.0" startX="-203.0" stroke="#00000040" />
+      <Label layoutX="15.0" layoutY="406.0" text="COMPONENTES :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_select_component_operation" layoutX="149.0" layoutY="403.0" mnemonicParsing="false" onAction="#select_component" text="Inserir Componente" />
+      <Label layoutX="16.0" layoutY="449.0" text="Componentes selecionados" />
+      <ScrollPane layoutX="13.0" layoutY="478.0" prefHeight="146.0" prefWidth="408.0">
+         <content>
+            <TextArea fx:id="field_components" prefHeight="144.0" prefWidth="404.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="btn_insert_operation" layoutX="298.0" layoutY="637.0" mnemonicParsing="false" onAction="#insert_operation" text="Inserir Operação" />
+      <Button fx:id="btn_cancel_operation" layoutX="224.0" layoutY="637.0" mnemonicParsing="false" onAction="#cancel_operation" text="Cancelar" />
+   </children>
+</AnchorPane>
